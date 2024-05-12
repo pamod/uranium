@@ -1,0 +1,42 @@
+#1. Open Google Cloud Console & select/create project.
+#2. Navigate to IAM & Admin -> Service Accounts -> Create Service Account.
+#3. Enter name & description, click Create.
+#4. Go to Keys tab, click Add Key -> JSON, click Create & save downloaded file securely.
+#5. Grant edit/view permissions on target spreadsheets if needed.
+#6. Use downloaded credentials JSON for authentication in your application.
+#7. Place the downloaded file in resources directory
+#8. Replace the name of the 'credentialPath' with the downloaded file name
+sources:
+  google:
+    enabled: "true"
+    name: "<APP_NAME>"
+    credential: "<PATH_TO_CREDENTIAL_FILE>"
+# Accessing Gemini Functionality:
+# 1. Set Up Your Project:
+#    - Ensure you have a Google Cloud Project with Gemini enabled.
+#    - Enable the "Generative Language API" service for your project.
+# 2. Use Google AI Studio (or Command Line):
+#    - There are two primary ways to interact with Gemini:
+#        - **Google AI Studio:**
+#            - Create a new project or open an existing one in Google AI Studio.
+#            - In the "Create Workspace" or "Edit Workspace" flow,
+#              choose "Generative Language" under "Available Capabilities".
+#            - Click "Get API Key" and choose to create a new key or use an existing one.
+#        - **Command Line:**
+#            - Refer to the official Gemini documentation for details on using the
+#              Generative Language API with command-line tools.
+# 3. Secure Your Credentials:
+#    - Regardless of the method used, treat the generated API key (or project information
+#      for command-line access) as confidential.
+#    - Avoid embedding it directly in your code. Consider environment variables or secure
+#      configuration management for storage.
+# 4. Leverage Gemini Functionality:
+#    - Once you have the necessary credentials, refer to the Gemini documentation
+#      for details on using the API or libraries to interact with the model and generate
+#      creative text formats.
+processors:
+ gemini:
+  enabled: "true"
+  url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
+  key: "<KEY>"
+  delay: 5000
