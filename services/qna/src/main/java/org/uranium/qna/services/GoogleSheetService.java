@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import com.google.api.services.sheets.v4.Sheets;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
@@ -33,7 +34,7 @@ public class GoogleSheetService {
     }
 
     private GoogleCredential googleCredential() throws IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(credentialPath);
+        InputStream inputStream = new FileInputStream(credentialPath);
         return GoogleCredential.fromStream(inputStream)
                 .createScoped(Collections.singletonList(SheetsScopes.SPREADSHEETS)); // Adjust scopes as needed
     }
