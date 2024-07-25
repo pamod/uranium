@@ -1,9 +1,7 @@
 package org.uranium.qna.controllers;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.uranium.qna.beans.SpreadsheetQA;
 import org.uranium.qna.processors.GeminiProcessor;
 import org.uranium.qna.services.GoogleSheetService;
@@ -13,6 +11,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/qna")
 public class QController {
     private final GoogleSheetService service;
@@ -23,7 +22,7 @@ public class QController {
     }
 
     @PostMapping("/sheet")
-    public ResponseEntity<String> fill(SpreadsheetQA spec) throws IOException {
+    public ResponseEntity<String> fill(@RequestBody SpreadsheetQA spec) throws IOException {
         // Start asynchronous processing in the background
         CompletableFuture.runAsync(() -> {
                     try {

@@ -9,8 +9,8 @@
 sources:
   google:
     enabled: "true"
-    name: "<APP_NAME>"
-    credential: "<PATH_TO_KEY_FILE>"
+    name: "RFPilot"
+    credential: "/Users/pamod/Desktop/code/uranium/services/qna/release/config/rfpilot-59f8f8d54b08.json"
 # Accessing Gemini Functionality:
 # 1. Set Up Your Project:
 #    - Ensure you have a Google Cloud Project with Gemini enabled.
@@ -35,8 +35,8 @@ sources:
 #      for details on using the API or libraries to interact with the model and generate
 #      creative text formats.
 processors:
- gemini:
-  enabled: "true"
-  url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
-  key: "<KEY_GOES_HERE>"
-  delay: 2000
+  gemini:
+    enabled: "true"
+    url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
+    key: "AIzaSyBF9R6ryc4FiCgyYK1u78uTLO-OneGp4yQ"
+    delay: 10
