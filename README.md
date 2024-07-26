@@ -8,7 +8,7 @@
 * Leverage AI for insightful answers to your questions.
 * Simplify workflow by automating data extraction and response generation.
 
-![Q&A Flow Diagram](https://github.com/pamod/uranium/images/QNAFlowDiagram.jpeg?raw=true)
+![Q&A Flow Diagram](https://github.com/pamod/uranium/blob/main/images/QNAFlowDiagram.jpeg)
 
 **Getting Started:**
 
