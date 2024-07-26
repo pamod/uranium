@@ -8,6 +8,8 @@
 * Leverage AI for insightful answers to your questions.
 * Simplify workflow by automating data extraction and response generation.
 
+![Q&A Flow Diagram](https://github.com/pamod/uranium/images/QNAFlowDiagram.jpeg?raw=true)
+
 **Getting Started:**
 
 **1. Prerequisites:**
@@ -18,7 +20,7 @@
 
 **2. Configuration:**
 
-* Edit `application.yml` located in the `/resources` directory.
+* Edit `application.yml` located in the `/release/config` directory.
 * Configure the following sections:
 
   **a. Google Sheet Integration:**
@@ -27,12 +29,12 @@
     sources:
       google:
         enabled: "true"
-        name: "RFPilot"  # Replace with your application name
+        name: "<ApplicationName>"  # Replace with your application name
         credential: "<CredentialFileName>"  # Replace with service account credential file name
     ```
 
     - Create a service account in your GCP project and download the credential file.
-    - Place the downloaded credential file in the `/resources` directory.
+    - Place the downloaded credential file in the `/release/config` directory.
 
   **b. Gemini AI Integration:**
 
@@ -46,6 +48,13 @@
     ```
 
     - Create a Gemini application and get your API key.
+  
+  **c. Start Application:**
+  
+    - Navigate to 'release' directory and execute the following
+   ```
+    sh ./start.sh
+   ```
 
 **3. Sending a Request:**
 
