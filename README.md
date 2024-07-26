@@ -100,15 +100,13 @@ Processing completed, please check the spreadsheet
 
 Open your Google Sheet and check the designated answer column for the AI-generated responses.
 
-
+Also check this video https://drive.google.com/file/d/1HnCUxGtkQMBaTehveooTpJ9Pd2HrjDn5/view?usp=drive_link 
 
 **Important Notes:**
 
 * If the processing engine encounters issues, "ERROR" will be written in the answer cell.
 * Currently, only Google Sheets are supported.
 * Ensure the Google Sheet has appropriate access permissions for the service account.
-
-![Uranium video](https://drive.google.com/file/d/1HnCUxGtkQMBaTehveooTpJ9Pd2HrjDn5/view?usp=drive_link)
 
 **Further Development:**
 
